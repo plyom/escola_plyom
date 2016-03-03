@@ -9,7 +9,8 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 Instalaremos o Ruby através do RVM (Ruby Version Manager: https://rvm.io/):
 ```
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-curl -L https://get.rvm.io | bash -s stable
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm install 2.2.3
 rvm use 2.2.3 --default
