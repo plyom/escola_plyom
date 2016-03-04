@@ -32,15 +32,13 @@
 
 <body data-spy="scroll" data-target="#main-navbar">
 
-  <div class="loader bg-red">
+  <div class="loader bg-green">
     <div class="loader-inner ball-scale-ripple-multiple vh-center">
       <div></div>
       <div></div>
       <div></div>
     </div>
   </div>
-
-
 
   <div class="main-container" id="page">
 
@@ -49,7 +47,7 @@
     ============================== -->
     <header id="nav2-3">
 
-      <nav class="navbar navbar-fixed-top bg-transparent" id="main-navbar" role="navigation">
+      <nav class="navbar navbar-fixed-top" id="main-navbar" role="navigation">
 
         <div class="container">
 
@@ -62,7 +60,6 @@
             </button>
 
             <a href="#" class="navbar-brand logo-black smooth-scroll"><img src="images/escolaplyom_black.png" alt="logo" /></a>
-            <a href="#" class="navbar-brand logo-white smooth-scroll"><img src="images/escolaplyom_black.png" alt="logo" /></a>
           </div>
 
           <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -75,7 +72,7 @@
               <li><a href="#pricing2-1" class="smooth-scroll">Preço</a></li>
               <!-- Dropdown Menu -->
 
-              <li><a href="#subscription1-3" class="btn-nav btn-red btn-signup smooth-scroll">Inscreva-se</a></li>
+              <li><a href="#subscription1-3" class="btn-nav btn-green btn-signup smooth-scroll">Inscreva-se</a></li>
             </ul><!-- /End Menu Links -->
           </div><!-- /End Navbar Collapse -->
 
@@ -88,7 +85,7 @@
     <!-- =========================
     HERO SECTION
     ============================== -->
-    <section id="hero12" class="hero hero-countdown bg-img" style="background-image:url('images/ruby.png');">
+    <section id="hero12" class="hero hero-countdown bg-img" style="background-image:url('images/bg-1.jpg');">
 
       <div class="overlay"></div>
 
@@ -117,7 +114,7 @@
                 <em class="textSeconds">seconds</em>
               </div>
             </div>
-            <a href="#pricing6-1" class="btn btn-shadow btn-red btn-lg smooth-scroll m-b-md">RESERVE SEU ASSENTO</a>
+            <a href="#pricing2-1" class="btn btn-shadow btn-green btn-lg smooth-scroll m-b-md">RESERVE SEU ASSENTO</a>
           </div>
         </div>
       </div>
@@ -257,26 +254,49 @@
         </div>
       </section>
 
-      <section id="pricing2-1" class="p-y-lg bg-edit bg-light content-align-sm">
-        <div class="container">
-          <div class="row pricing-st y-middle">
-            <!-- Pricing Table -->
-            <div class="col-md-5 col-sm-6 m-b">
-              <div class="info text-center">
-                <h4 class="m-b f-w-900 text-left">Garanta seu lugar!</h4>
-                <div class="price text-edit text-left"> <span class="currency">R$</span>400</div>
-                <p class="m-t-lg m-b-md f-w-900 text-left">Preço justo e ideal para quem quer aprender</p>
-                <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post" onsubmit="PagSeguroLightbox(this); return false;">
-                  <input type="hidden" name="itemCode" value="DD52E029ADAD98A33448EFBF62F6C480" />
-                  <input type="submit" class="btn btn-shadow btn-red text-uppercase" name="submit" value="Comprar" />
-                </form>
-                <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
-              </div>
-            </div>
+      <section id="pricing2-1" class="p-y-lg">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div style="visibility: visible; animation-name: fadeIn;" class="section-header text-center wow fadeIn">
+                            <h2>Garanta já!</h2>
+                            <p class="lead">Aproveite nossas promoções antes que acabe.</p>
+                        </div>
+                    </div>
+                </div>
 
-          </div>
-        </div>
-      </section>
+                <div class="row pricing-3po">
+                    <!-- Pricing Table 1 -->
+                    <div class="col-md-4 green">
+                        <div class="info text-center">
+                            <h4 class="m-b-md">Primeiro Lote</h4>
+                            <div class="price text-edit"> <span class="currency">R$</span>350</div>
+                            <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                              <input type="hidden" name="itemCode" value="06672C0FAAAA977AA4117F9BC1A0D583" />
+                              <input type="submit" class="btn btn-shadow btn-green" name="submit" value="Comprar" />
+                            </form>
+                        </div>
+                    </div>
+                    <!--  DD52E029ADAD98A33448EFBF62F6C480 -->
+                    <div class="col-md-4 ">
+                        <div class="info text-center">
+                            <h4 class="m-b-md">Segundo Lote</h4>
+                            <div class="price text-edit"> <span class="currency">R$</span>400</div>
+                            <span class="btn btn-dark">Em breve..</span>
+                        </div>
+                    </div>
+                    <!-- Pricing Table 3 -->
+                    <div class="col-md-4">
+                        <div class="info text-center">
+                            <h4 class="m-b-md">Último Lote</h4>
+                            <div class="price text-edit"> <span class="currency">R$</span>450</div>
+                            <span class="btn btn-dark">Em breve..</span>
+                        </div>
+                    </div>
+                </div><!-- /End Row -->
+            </div><!-- /End Container -->
+        </section>
 
       <section id="subscription1-3" class="p-y-lg subscription bg-img" style="background-image:url('images/ruby-bg.jpg')">
         <div class="overlay"></div>
@@ -296,7 +316,7 @@
                 <div class="form-group">
                   <input class="form-control" id="mce-EMAIL" placeholder="Coloque seu email" name="MERGE0" required="" type="email">
                 </div>
-                <button type="submit" class="btn btn-red">Increver-se</button>
+                <button type="submit" class="btn btn-green">Increver-se</button>
               </form>
             </div>
           </div>
@@ -350,6 +370,7 @@
     <script src="js/plugins/picker.js"></script>
     <script src="js/plugins/picker.date.js"></script>
     <script src="js/custom.js"></script>
+    <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
 
   </body>
   </html>

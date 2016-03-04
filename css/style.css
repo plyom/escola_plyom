@@ -961,7 +961,7 @@ a.btn-app {
   margin: 0 0;
   border: 25px solid rgba(0,0,0,0);
   border-top-width: 0;
-  border-bottom-color: darkred;
+  border-bottom-color: lightgreen;
   font: normal 100%/normal Arial, Helvetica, sans-serif;
   color: rgba(0,0,0,1);
   -o-text-overflow: clip;
@@ -980,7 +980,7 @@ a.btn-app {
   top: 25px;
   left: -25px;
   border: 50px solid rgba(0,0,0,0);
-  border-top: 70px solid darkred;
+  border-top: 40px solid lightgreen;
   border-bottom-width: 0;
   font: normal 100%/normal Arial, Helvetica, sans-serif;
   color: rgba(0,0,0,1);
@@ -1002,7 +1002,7 @@ a.btn-app {
 
 .top {
     display: inline-block;
-    height: 95px;
+    height: 65px;
     width: 100px;
     position: fixed;
     bottom: 30px;
