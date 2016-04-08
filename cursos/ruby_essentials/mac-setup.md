@@ -1,7 +1,20 @@
+Este setup foi executado em um Mac com OS X El Capitain.
+
+## XCode Command Line Developer Tools
+Antes de tudo, precisamos preparar o Mac para desenvolver software, para isso, abra o Terminal e digite o seguinte:
+(Caso você já use o seu Mac para desenvolver software é possível que já tenha concluído dessa parte.)
+```
+xcode-select --install
+gcc --version
+```
+
+Recebendo uma resposta como: Apple LLVM version 7.3.0 (clang-703.0.29)
+
 ## Homebrew
-Antes de tudo, instalaremos o Homebrew. Ele nos permitirá instalar e compilar pacotes de software diretamente da fonte:
+Instalaremos o Homebrew. Ele nos permitirá instalar e compilar pacotes de software diretamente da fonte:
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+which brew
 ```
 
 ## RVM
@@ -12,13 +25,6 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 rvm install 2.2.3
 rvm use 2.2.3 --default
 ruby -v
-```
-
-## Bundler
-Em seguida, configuraremos o Rubygems para não instalar a documentação de cada pacote localmente e instalaremos o Bundler:
-```
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-gem install bundler
 ```
 
 Com isso, temos uma instalação completa de Ruby e conseguiremos passar por boa parte do curso.
@@ -42,23 +48,15 @@ rails -v
 ## PostgreSQL
 Para o PostgreSQL, vamos adicionar um novo repositório e instalar uma versão recente do Postgres 9.3.
 ```
-sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
-wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install postgresql-common
-sudo apt-get install postgresql-9.3 libpq-dev
+brew install postgresql
 ```
-
-A instalação do Postgres não faz o setup de um usuário para você.
+Uma vez instalado, você receberá algumas instruções na tela, siga-as com fidelidade. No meu caso foram os seguintes comandos:
 ```
-sudo -u postgres createuser tiago -s
+ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
-Lembre-se de trocar `tiago` pelo seu username.
+Por padrão, o usuário do postgresql é o seu username do OS X com senha vazia.
 
 ## Atom (Opcional)
-O editor que texto que será usado durante o curso será o Atom:
-```
-sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-get update
-sudo apt-get install atom
-```
+O editor que texto que será usado durante o curso será o Atom (https://atom.io/).
+Basta acessar o website, fazer o download e executar, conforme qualquer outra aplicação do seu Mac.
